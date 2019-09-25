@@ -31,6 +31,7 @@ class QRScannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scanButton.layer.cornerRadius = 0
     }
     
  

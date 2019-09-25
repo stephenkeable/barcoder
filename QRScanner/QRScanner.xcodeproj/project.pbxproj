@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49340568233AB0DF0016E4AB /* QRHIstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49340567233AB0DF0016E4AB /* QRHIstoryViewController.swift */; };
 		921807A5223B6DA200F36C40 /* CopyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921807A4223B6DA200F36C40 /* CopyLabel.swift */; };
 		92368507223624F7005C1AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92368506223624F7005C1AD7 /* AppDelegate.swift */; };
 		9236850E223624F8005C1AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9236850D223624F8005C1AD7 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49340567233AB0DF0016E4AB /* QRHIstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRHIstoryViewController.swift; sourceTree = "<group>"; };
 		921807A4223B6DA200F36C40 /* CopyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyLabel.swift; sourceTree = "<group>"; };
 		92368503223624F7005C1AD7 /* QRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92368506223624F7005C1AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				9236851922362675005C1AD7 /* QRScannerViewController.swift */,
 				9236851F22362AAA005C1AD7 /* DetailViewController.swift */,
+				49340567233AB0DF0016E4AB /* QRHIstoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				TargetAttributes = {
 					92368502223624F7005C1AD7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -197,6 +201,7 @@
 				9236852022362AAA005C1AD7 /* DetailViewController.swift in Sources */,
 				9236852322362B1C005C1AD7 /* QRData.swift in Sources */,
 				921807A5223B6DA200F36C40 /* CopyLabel.swift in Sources */,
+				49340568233AB0DF0016E4AB /* QRHIstoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4Z9R274Z8Z;
+				DEVELOPMENT_TEAM = 24FK69Q6J8;
 				INFOPLIST_FILE = QRScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,7 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.QRScanner.QRScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,7 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4Z9R274Z8Z;
+				DEVELOPMENT_TEAM = 24FK69Q6J8;
 				INFOPLIST_FILE = QRScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,7 +366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.QRScanner.QRScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

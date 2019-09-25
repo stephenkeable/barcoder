@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ooZ-am-ucH">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ooZ-am-ucH">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--QRScanner-->
+        <!--Barcoder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="QRScannerViewController" customModule="QRScanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,18 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5d-QF-enP" customClass="QRScannerView" customModule="QRScanner" customModuleProvider="target">
-                                <rect key="frame" x="20" y="84" width="335" height="335"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="375"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="k5d-QF-enP" secondAttribute="height" multiplier="1:1" id="4bd-w0-8Ej"/>
+                                    <constraint firstAttribute="width" secondItem="k5d-QF-enP" secondAttribute="height" multiplier="1:1" id="m6y-73-nKQ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuC-BW-PfY">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Sj-UY-zFg"/>
+                                </constraints>
+                                <state key="normal" title="Barcode History">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qt2-9H-kw0" kind="show" id="DJx-iU-4mF"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZE-7K-NwS">
-                                <rect key="frame" x="87.5" y="427" width="200" height="50"/>
+                                <rect key="frame" x="0.0" y="419" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.79458792099999997" green="0.27550812429999999" blue="0.20028522970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Bam-2P-GFH"/>
-                                    <constraint firstAttribute="height" constant="50" id="Jts-Sm-hbc"/>
+                                    <constraint firstAttribute="height" constant="50" id="eYW-CR-P1W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Scan again">
@@ -47,17 +57,21 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5d-QF-enP" secondAttribute="trailing" constant="20" id="aLd-BU-xpd"/>
-                            <constraint firstItem="2ZE-7K-NwS" firstAttribute="top" secondItem="k5d-QF-enP" secondAttribute="bottom" constant="8" id="hx7-Il-b9f"/>
-                            <constraint firstItem="2ZE-7K-NwS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kaJ-e7-MmT"/>
-                            <constraint firstItem="k5d-QF-enP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mTS-1l-qnS"/>
-                            <constraint firstItem="k5d-QF-enP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="vzL-HR-vdi"/>
+                            <constraint firstItem="2ZE-7K-NwS" firstAttribute="top" secondItem="k5d-QF-enP" secondAttribute="bottom" id="25K-ai-fe9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5d-QF-enP" secondAttribute="trailing" id="EzC-8n-NUn"/>
+                            <constraint firstItem="2ZE-7K-NwS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HsU-Qg-rMn"/>
+                            <constraint firstItem="k5d-QF-enP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VUC-Bd-RRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ZE-7K-NwS" secondAttribute="trailing" id="bQI-cB-RAb"/>
+                            <constraint firstItem="CuC-BW-PfY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cQm-hQ-zu3"/>
+                            <constraint firstItem="CuC-BW-PfY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gKB-cd-Q7c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CuC-BW-PfY" secondAttribute="bottom" id="keg-bh-Qeg"/>
+                            <constraint firstItem="k5d-QF-enP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n8u-Ld-m4h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="QRScanner" largeTitleDisplayMode="always" id="pl6-IF-Mjf"/>
+                    <navigationItem key="navigationItem" title="Barcoder" largeTitleDisplayMode="always" id="pl6-IF-Mjf"/>
                     <connections>
                         <outlet property="scanButton" destination="2ZE-7K-NwS" id="S3G-Nz-sZc"/>
                         <outlet property="scannerView" destination="k5d-QF-enP" id="mSH-vW-m7y"/>
@@ -77,35 +91,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Found Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzx-qz-HeC">
-                                <rect key="frame" x="20" y="84" width="335" height="23"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="64" width="335" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHn-E2-d9y" customClass="CopyLabel" customModule="QRScanner" customModuleProvider="target">
-                                <rect key="frame" x="20" y="117" width="335" height="27.5"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="97" width="335" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-8Y-WFc">
-                                <rect key="frame" x="137" y="614" width="101" height="33"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <state key="normal" title="Open in web"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXw-kC-7u0">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V6Q-Kd-ky2"/>
+                                </constraints>
+                                <state key="normal" title="Barcode History">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="openInWebAction:" destination="CBx-2W-LBw" eventType="touchUpInside" id="JS3-84-WXJ"/>
+                                    <segue destination="Qt2-9H-kw0" kind="show" id="ff5-6W-LkJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myn-t8-kZJ">
+                                <rect key="frame" x="0.0" y="567" width="375" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1T6-Mk-g2V"/>
+                                </constraints>
+                                <state key="normal" title="Share Barcode">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareQRCode:" destination="CBx-2W-LBw" eventType="touchUpInside" id="UhT-Ft-VLd"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Egi-UG-f8P" firstAttribute="bottom" secondItem="Na7-8Y-WFc" secondAttribute="bottom" constant="20" id="3fk-r8-W3L"/>
                             <constraint firstItem="Egi-UG-f8P" firstAttribute="trailing" secondItem="Yzx-qz-HeC" secondAttribute="trailing" constant="20" id="3nS-p8-yZK"/>
-                            <constraint firstItem="Na7-8Y-WFc" firstAttribute="centerX" secondItem="xW8-wg-wFa" secondAttribute="centerX" id="GAC-qA-gik"/>
+                            <constraint firstItem="AXw-kC-7u0" firstAttribute="trailing" secondItem="Egi-UG-f8P" secondAttribute="trailing" id="589-Zv-9Nu"/>
+                            <constraint firstItem="AXw-kC-7u0" firstAttribute="bottom" secondItem="Egi-UG-f8P" secondAttribute="bottom" id="FMk-pz-LpN"/>
+                            <constraint firstItem="Egi-UG-f8P" firstAttribute="trailing" secondItem="Myn-t8-kZJ" secondAttribute="trailing" id="Hju-OQ-5RW"/>
                             <constraint firstItem="Yzx-qz-HeC" firstAttribute="leading" secondItem="Egi-UG-f8P" secondAttribute="leading" constant="20" id="QNZ-Ep-DuY"/>
                             <constraint firstItem="Egi-UG-f8P" firstAttribute="trailing" secondItem="bHn-E2-d9y" secondAttribute="trailing" constant="20" id="TjA-1X-5gK"/>
                             <constraint firstItem="Egi-UG-f8P" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bHn-E2-d9y" secondAttribute="bottom" constant="60" id="UmK-nc-pom"/>
+                            <constraint firstItem="Myn-t8-kZJ" firstAttribute="leading" secondItem="Egi-UG-f8P" secondAttribute="leading" id="WGN-sM-tWC"/>
                             <constraint firstItem="bHn-E2-d9y" firstAttribute="leading" secondItem="Egi-UG-f8P" secondAttribute="leading" constant="20" id="dM9-cz-rjd"/>
+                            <constraint firstItem="AXw-kC-7u0" firstAttribute="leading" secondItem="Egi-UG-f8P" secondAttribute="leading" id="fGG-wz-F3P"/>
+                            <constraint firstItem="AXw-kC-7u0" firstAttribute="top" secondItem="Myn-t8-kZJ" secondAttribute="bottom" id="glh-H9-j4m"/>
                             <constraint firstItem="Yzx-qz-HeC" firstAttribute="top" secondItem="Egi-UG-f8P" secondAttribute="top" constant="20" id="pfS-IJ-eqO"/>
                             <constraint firstItem="bHn-E2-d9y" firstAttribute="top" secondItem="Yzx-qz-HeC" secondAttribute="bottom" constant="10" id="yW3-nd-uXb"/>
                         </constraints>
@@ -119,13 +153,104 @@
             </objects>
             <point key="canvasLocation" x="1748" y="26.53673163418291"/>
         </scene>
+        <!--Barcode History-->
+        <scene sceneID="u7o-L5-GEn">
+            <objects>
+                <tableViewController title="Barcode History" id="Qt2-9H-kw0" customClass="QRHistoryViewController" customModule="QRScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9DE-Rm-Qat">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="EyT-en-uHv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tic-qg-MiC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="kfL-2r-2B6"/>
+                                    </constraints>
+                                    <state key="normal" title="Share History"/>
+                                    <connections>
+                                        <action selector="shareQRHistory:" destination="Qt2-9H-kw0" eventType="touchUpInside" id="qMI-lp-dmo"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="tic-qg-MiC" firstAttribute="centerY" secondItem="EyT-en-uHv" secondAttribute="centerY" id="45r-93-Vvl"/>
+                                <constraint firstAttribute="trailing" secondItem="tic-qg-MiC" secondAttribute="trailing" id="Iet-pu-YSs"/>
+                                <constraint firstItem="tic-qg-MiC" firstAttribute="leading" secondItem="EyT-en-uHv" secondAttribute="leading" id="lR3-0z-9G8"/>
+                                <constraint firstItem="tic-qg-MiC" firstAttribute="centerX" secondItem="EyT-en-uHv" secondAttribute="centerX" id="s16-gN-4Hc"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="bpT-q2-BDc">
+                            <rect key="frame" x="0.0" y="149.5" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXk-6S-LgG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="a0M-cn-DkG"/>
+                                    </constraints>
+                                    <state key="normal" title="Clear History">
+                                        <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clearHistory:" destination="Qt2-9H-kw0" eventType="touchUpInside" id="yW8-NM-bsp"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="sXk-6S-LgG" firstAttribute="leading" secondItem="bpT-q2-BDc" secondAttribute="leading" id="KB2-Ia-79B"/>
+                                <constraint firstItem="sXk-6S-LgG" firstAttribute="leading" secondItem="bpT-q2-BDc" secondAttribute="leading" id="Rfm-7F-5zp"/>
+                                <constraint firstItem="sXk-6S-LgG" firstAttribute="centerX" secondItem="bpT-q2-BDc" secondAttribute="centerX" id="SPS-br-uea"/>
+                                <constraint firstItem="sXk-6S-LgG" firstAttribute="centerY" secondItem="bpT-q2-BDc" secondAttribute="centerY" id="WHN-g1-YmU"/>
+                                <constraint firstAttribute="trailing" secondItem="sXk-6S-LgG" secondAttribute="trailing" id="kCu-hp-YIo"/>
+                                <constraint firstItem="sXk-6S-LgG" firstAttribute="centerX" secondItem="bpT-q2-BDc" secondAttribute="centerX" id="mnK-5J-J5w"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QRHistoryTableCell" textLabel="hrF-ot-rmH" style="IBUITableViewCellStyleDefault" id="GhE-FY-OY6">
+                                <rect key="frame" x="0.0" y="78" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GhE-FY-OY6" id="l8P-b1-osz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hrF-ot-rmH">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qt2-9H-kw0" id="6Yz-mK-VDg"/>
+                            <outlet property="delegate" destination="Qt2-9H-kw0" id="Rmr-HD-hZc"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="QRHistoryTableView" destination="9DE-Rm-Qat" id="91s-Lp-bZh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxA-r5-A3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="27"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lZN-7E-OQy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ooZ-am-ucH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pZI-o9-zn6">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -138,4 +263,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DJx-iU-4mF"/>
+    </inferredMetricsTieBreakers>
 </document>
