@@ -13,20 +13,25 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailLabel: CopyLabel!
     
     var qrData: QRData?
+    //var qrHistory: Array<String> = Array()
+    
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         detailLabel.text = qrData?.codeString
         UIPasteboard.general.string = detailLabel.text
-        showToast(message : "Text copied to clipboard")
-
-    }
-
-    @IBAction func openInWebAction(_ sender: Any) {
-        if let url = URL(string: qrData?.codeString ?? ""), UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url, options: [:])
-        } else {
-            showToast(message : "Not a valid URL")
+        // showToast(message : "Text copied to clipboard")
+        
+        if let qrString = qrData?.codeString {
+            delegate.qrHistory.append(qrString)
         }
+    }
+    
+    @IBAction func shareQRCode(_ sender: Any) {
+        
+        let shareItems = [detailLabel.text]
+        let shareSheet = UIActivityViewController(activityItems: shareItems as! [String], applicationActivities: nil)
+        present(shareSheet, animated: true)
     }
 }

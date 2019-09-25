@@ -84,7 +84,8 @@ extension QRScannerView {
             captureSession?.addOutput(metadataOutput)
             
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.qr, .ean8, .ean13, .pdf417]
+            metadataOutput.metadataObjectTypes = [.qr, .ean8, .ean13, .pdf417, .upce]
+            //metadataOutput.metadataObjectTypes = [.qr, .ean8, .ean13, .pdf417, .upce, .code39, .code39Mod43, .code93, .code128, .aztec, .interleaved2of5, .itf14, .dataMatrix]
         } else {
             scanningDidFail()
             return
