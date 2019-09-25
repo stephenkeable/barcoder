@@ -1,8 +1,8 @@
 # Barcoder
 
-Fork of https://github.com/abhimuralidharan/QRScanner
+Fork of https://github.com/abhimuralidharan/QRScanner. 
 
-Adding a history of barcodes/QR codes scanned in a tableview. 
+Adding a history of barcodes/QR codes scanned in a tableview (no persistence currently). 
 Ability to share a barcode and/or the history of barcodes (array joined to string with \n).  
 Making sure UI colours are compatible with Dark mode. 
 
