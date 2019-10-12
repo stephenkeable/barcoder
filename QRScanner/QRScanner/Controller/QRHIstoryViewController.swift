@@ -37,7 +37,18 @@ class QRHistoryViewController: UITableViewController {
     
     @IBAction func shareQRHistory(_ sender: Any) {
         
-        let qrHistoryString = delegate.qrHistory.joined(separator: "\n")
+        var qrHistoryTrimmed = [String]()
+        for code in delegate.qrHistory {
+            if code.prefix(1) == "0" {
+                // strip the leading 0
+                let stripped = String(code.dropFirst())
+                qrHistoryTrimmed.append(stripped)
+            } else {
+                qrHistoryTrimmed.append(code)
+            }
+        }
+        
+        let qrHistoryString = qrHistoryTrimmed.joined(separator: "\n")
         let shareItems = [qrHistoryString]
         let shareSheet = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
         present(shareSheet, animated: true)
